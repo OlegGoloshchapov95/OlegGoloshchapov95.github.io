@@ -72,6 +72,8 @@
     } 
  };          
  div1.onmousedown = function(e){
+ 	 e.preventDefault();
+     e.stopPropagation(); 
      moveAt(e,div1,div2);          
      document.onmousemove = function(e){
         moveAt(e,div1,div2); 
