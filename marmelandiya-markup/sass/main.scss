@@ -1,0 +1,844 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat-bold-webfont.eot');
+    src: url('../fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-bold-webfont.woff') format('woff'),
+         url('../fonts/montserrat-bold-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'montserrat-light';
+    src: url('../fonts/montserrat-light-webfont.eot');
+    src: url('../fonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-light-webfont.woff') format('woff'),
+         url('../fonts/montserrat-light-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat-regular-webfont.eot');
+    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('../fonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+*{
+	box-sizing:border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+    display: none;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+   font-family: 'montserrat',Arial,sans-serif;
+}
+
+.bold-text{
+   font-weight:bold;
+   font-family: 'montserrat'; 
+}
+.light-text{
+  font-family: 'montserrat-light';
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+ 
+.clearfix:after {
+  clear: both;
+}
+ 
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
+.custom-container{
+   padding:0 20px;
+   max-width: 1100px;
+   margin-left:auto;
+   margin-right:auto; 
+}
+
+.fixed-image-for-white-background{
+   background-image:url(../img/photo.png);
+   background-attachment:fixed; 
+   background-size:126% auto;
+   background-position:center;
+} 
+
+.main-header-block{
+	background-color:rgba(0,0,0,0.30);
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	padding:20px 0;
+	z-index:2;
+    .text-in-top{
+      color: #fff;
+      font-size: 22px;
+      text-align:center; 
+      a{
+        text-decoration:none;
+        color:inherit;
+      }
+    } 
+}
+
+.main-top-block{
+
+    padding:100px 0;
+    color:#fff;
+    text-align:center; 
+    background-image:url(../img/main-background.webp);
+    background-size:cover; 
+    background-attachment:fixed;
+    background-position:center;
+    position:relative;
+    &::after{
+      content:"";	
+      background-color:rgba(0,0,0,0.4);
+      position:absolute;
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;   
+    }
+    &>*{
+    	position:relative;
+    	z-index:1;
+    }
+    .logo>img{
+       display:block;
+       margin-left:auto;
+       margin-right:auto;
+       max-width:100%; 
+       margin-bottom:24px; 
+    }
+    .first-title{
+       margin-bottom:38px;
+       font-size:68px;
+       font-weight:bold;
+    }
+    .second-title{
+       font-size:24px;
+       font-weight:bold;	
+    }
+
+}
+.about-our-school-section{
+  padding:50px 0;
+  text-align:center;
+  .section-title{
+    font-size: 52px;
+    margin-bottom:50px;
+    font-weight:bold; 
+  }
+  .text-content{
+    font-size: 24px;
+    line-height: 1.5;
+    max-width:1000px;
+    margin-left:auto;
+    margin-right:auto;  
+    font-family:'montserrat-light';
+  }
+
+}
+
+.carousel-section{
+  background-color:#ffe852; 
+  padding:30px 0 15px;
+}
+
+.school-carousel{
+  position:relative;  
+}
+
+.school-carousel .owl-nav .owl-prev > span, .school-carousel .owl-nav .owl-next > span {
+  font-size: 50px;
+}
+.school-carousel .owl-nav .owl-prev,.school-carousel .owl-nav .owl-next{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);   
+}
+.school-carousel .owl-nav .owl-prev {
+  left:0;
+}
+.school-carousel .owl-nav .owl-next {
+  right:0;
+}
+.school-carousel .owl-nav .owl-next>span, .school-carousel .owl-nav .owl-prev>span{  
+  color:#005DA0;
+  line-height:1.3;
+  position: relative;
+  top: -3px;
+}
+.school-carousel .owl-nav .owl-next, .school-carousel .owl-nav .owl-prev{
+  background-color:#fff!important; 
+  display:inline-block; 
+}
+.school-carousel .owl-nav button.owl-next,.school-carousel .owl-nav button.owl-prev {
+    font-size: 45px;
+}
+.school-carousel .owl-nav button.owl-next{
+  -webkit-transform:translateX(7px) translateY(-50%);
+        -ms-transform:translateX(7px) translateY(-50%);
+            transform:translateX(7px) translateY(-50%);   
+  padding-right:0!important;
+  padding-left:20px!important;  
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;        
+}
+.school-carousel .owl-nav button.owl-prev{
+  -webkit-transform:translateX(-7px) translateY(-50%);
+       -ms-transform:translateX(-7px) translateY(-50%);
+           transform:translateX(-7px) translateY(-50%); 
+  padding-left:0!important; 
+  padding-right:20px!important;  
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;        
+}
+
+.advantages-section{
+
+   padding:50px 0;
+
+   .section-title{
+     text-transform:uppercase;
+     font-size:42px;
+     margin-bottom:73px;
+     font-weight:bold;
+     text-align:center;   
+   }  
+
+}
+.advantages-items-container{
+   margin-left:-20px;
+   margin-right:-20px; 
+   .advantages-item-wrap{
+      float:left;
+      padding-left:20px;
+      padding-right:20px; 
+      width:50%; 
+   }
+
+   .advantages-item{
+      padding-left:65px;
+      position:relative;
+      line-height: 1.35;
+      margin-bottom:40px;
+      .img-container{
+        img{
+          position:absolute;
+          width:45px;
+          left:0;
+          top:0;
+          height:auto;  
+        }
+      }
+
+      .title{
+          font-size: 22px;
+          margin-bottom:15px;
+          font-weight:bold; 
+      }
+      .desc{
+        font-size: 16px;
+        line-height:1.55;
+        font-family: 'montserrat-light';
+      }
+   }
+}
+.anketa-school-section{
+  padding:80px 0;
+  background-image:url(../img/room-photo.webp);
+  background-size:cover;
+  position:relative;
+  &::after{
+    content:"";
+    width:100%;
+    height:100%;  
+    position:absolute;
+    top:0;
+    left:0;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  }
+  &>*{
+    position:relative;
+    z-index:5;
+  }
+  .section-title{
+    font-size:42px;
+    color:#fff;
+    font-weight:bold; 
+    text-align:center;
+    margin-bottom:30px;
+    max-width:960px;
+    margin-right:auto;
+    margin-left:auto;   
+  }
+  .desc-text{
+    margin-bottom:20px;
+    p{
+      font-size:30px;
+      color:#fff;
+      text-align:center;
+      line-height:1.4; 
+      font-family:'montserrat-light'; 
+    }
+  }
+}
+
+.hidden-captcha{
+  display:none;
+}
+
+#anketa_school{
+  text-align:center; 
+  background-color:#ffe852;
+  padding:15px;
+  font-family:'Monsterrat',Arial,sans-serif;
+  width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:5px;
+}
+#anketa_school .label-form{
+    text-align:left;
+    margin-bottom:5px;
+    font-weight:bold;  
+}
+#anketa_school .childregender-group{
+  text-align:left; 
+}
+#anketa_school .childregender-group span{
+  font-weight:bold; 
+}
+#anketa_school  .form-row{
+    margin-left:-7px;
+    margin-right:-7px; 
+}
+#anketa_school  .form-row::after{
+  content:"";
+  clear:both;
+  visibility:hidden;
+  display:table;
+}
+#anketa_school .form-group{
+  margin-bottom:15px;
+}
+#anketa_school  .form-row>.form-group{
+  float:left;
+  width:50%;
+  padding-right:7px;
+  padding-left:7px; 
+}
+#anketa_school input[type="text"],
+#anketa_school textarea{
+  display:block;
+  width:100%; 
+  padding:3px;   
+}
+
+#anketa_school input[type="submit"]{
+  background-color:#ffe852;
+  color:#000;
+  border:2px solid #fff;
+  padding:7px 0;
+  font-weight:bold; 
+  font-size:16px;
+  cursor:pointer; 
+  max-width:250px;
+  width:100%;   
+}
+
+#anketa_school .anketa-school-title{
+  font-family:'Monsterrat',Arial,sans-serif;
+  color:#000;
+  font-weight:bold; 
+  font-size:22px;
+  margin-bottom:20px;
+}
+
+.callmy-school-section{
+  padding:50px 0 0;
+  background-color: #ffe852;
+
+  .text-content{
+    font-size:30px;
+    text-align:center; 
+    max-width: 760px;
+    margin-right:auto;
+    margin-left:auto;
+    line-height: 1.35;
+    font-family: 'montserrat-light';
+  }
+
+
+} 
+
+.our-team-section{
+  padding:50px 0;
+  text-align:center;
+  .section-title{
+    font-size: 38px;
+    margin-bottom:15px;
+    font-weight:bold; 
+  }
+  .text-content{
+    font-size: 24px;
+    line-height: 1.4; 
+    max-width:70%; 
+    margin-left:auto;
+    margin-right:auto; 
+    font-family: 'montserrat-light';
+  }
+
+}
+
+
+#callmy_school{
+  background-color:#ff5136;
+    padding:10px 15px;
+  font-family:'Monsterrat',Arial,sans-serif;
+  width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow:hidden;
+    position:relative;
+    top:15px;
+    max-width:583px; 
+}
+
+#callmy_school .form-group{
+  width:33.33%;
+  padding-left:7px;
+  padding-right:7px;
+  float:left; 
+}
+#callmy_school input{
+  display:block;
+  width:100%; 
+  padding-left:12px;
+  height:50px;   
+}
+#callmy_school input[type="submit"]{
+   font-weight:bold;
+   color:#000; 
+   background:#ff5136;
+   border:2px solid #fff;
+   text-align:left;
+   cursor:pointer;
+   font-size:16px; 
+}
+
+.what-is-necessary-section{
+   padding:50px 0;
+   background-color:#ffe852;
+    .custom-container{
+     max-width:750px;
+    }
+   .section-title{
+      font-size:48px;
+      font-weight:bold;
+      margin-bottom:50px; 
+   }
+   .text-content{
+      text-align:center;
+      font-size:22px;
+      line-height:1.45; 
+   }
+   .necessary-list{
+    margin-bottom:30px;
+     li{
+      &::before{
+        content:"-";
+        margin-right:5px;  
+      }
+     } 
+   }
+}
+
+.studing-programs-section{
+   padding:50px 0;
+   .section-title{
+     font-size: 42px;
+     line-height: 1.23;
+     font-weight:bold; 
+     margin-bottom:15px;
+     text-align:center; 
+   }
+}
+
+.studing-programs-container{
+   margin-left:-20px;
+   margin-right:-20px; 
+   .item-wrap{
+      float:left;
+      padding-left:20px;
+      padding-right:20px; 
+      width:33.33%; 
+   }
+   .item{
+      margin-bottom:40px;
+      .img-container{
+        position:relative;
+        margin-bottom:35px;
+        img{
+          width:100%;
+          height:auto;
+          display:block;  
+        }
+        &::after{
+          content:"";
+          position:absolute;
+          width:100%;
+          height:100%;
+          left:0;
+          top:0;
+          background-image:linear-gradient(top, rgba(0,0,0,0.40), rgba(0,0,0,0.50));
+
+        }
+        .desc{
+          font-size: 24px;
+          line-height: 1.35;
+          color:#fff;
+          font-weight:bold;
+          padding:30px 20px;
+          position:absolute;
+          bottom:0;
+          left:0;
+          width:100%;
+          z-index:1;  
+        }
+      }
+      .text{
+          font-size: 18px;
+          line-height: 1.55;
+          font-family: 'montserrat-light';
+      }
+   }
+}  
+
+
+.FAQ-block-section{
+   padding:50px 0;
+   .section-title{
+     text-transform:uppercase;
+     font-weight:bold;
+     font-size: 28px;
+     line-height: 1.17;  
+     text-align:center; 
+   } 
+   .undertitle-desc{
+     font-size: 16px;
+     line-height: 1.55;
+     text-align:center;
+     margin-bottom:50px; 
+     font-family: 'montserrat-light';
+   }
+}
+.questions-and-answers-container{
+   max-width:760px;
+   margin-left:auto;
+   margin-right:auto; 
+   margin-bottom:50px; 
+}
+.question-and-answer{
+   margin-bottom:30px;
+  .question-block,.answer-block{
+    padding: 28px 40px 27px;
+    border-radius: 40px;
+    position:relative;
+  }
+  .question-block{
+    background-color: rgb(255, 81, 54);
+    color:#fff;
+    margin-right: 50px;
+    margin-bottom:30px;
+    .svg-img{
+      position: absolute;
+      left: 17px;
+      bottom: -20px;
+    }
+  }
+  .answer-block{
+    background: rgb(245, 238, 101);
+    margin-left:50px;
+    .svg-img{
+      position: absolute;
+      right: 17px;
+      bottom: -20px;
+    }
+  }
+  .inner{
+    display:table-row;
+    .word{
+      display:table-cell;
+      width:100px;
+      padding-right: 15px;
+      font-weight:bold;
+      text-transform:uppercase;
+      vertical-align:top; 
+      font-size:12px;   
+    }
+    .text{
+      vertical-align:top;
+      display:table-cell; 
+      font-size:16px;
+    }
+  }
+}
+
+
+.informational-partner{
+  font-size:0;
+  &>*{
+    font-size:14px;
+  }
+  .text{
+    display:inline-block;
+    width:60%; 
+    text-align:center;
+    font-size: 22px;
+    line-height: 1.55; 
+    font-family: 'montserrat-light';
+  }
+  .btn-wrapper{
+    display:inline-block;
+    width:40%; 
+    text-align:center; 
+  }
+  .btn{
+    color: #ffffff;
+    background-color: #e61e53;
+    border-radius: 100px;
+    padding:20px 60px;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+    display:inline-block;     
+    text-decoration:none;
+  }
+}
+
+.main-footer-block{  
+  padding:50px 0;
+  background-color: #ff5136;
+  color:#fff;
+  &>.custom-container{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+  }
+  .title{
+    margin-bottom:25px;
+    font-size: 24px;
+    line-height: 1.35;
+    font-weight:bold; 
+  } 
+  .data-text{
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  .contacts,.address{
+    position:relative;
+    padding-right:110px;
+    min-height:100px; 
+    margin-top:5px;
+    margin-bottom:5px;
+    width:47%; 
+    .footer-img{
+      img{
+        position:absolute;
+        width:100px;
+        height:auto;
+        top:0;
+        right:0;
+        border-radius:50%;   
+      }
+    } 
+  }
+}
+
+@media (max-width: 991.98px){
+   .advantages-items-container .advantages-item-wrap{
+     width: 100%;
+   }
+   .studing-programs-container{
+      .item-wrap{
+        width:50%; 
+      }
+   } 
+   .informational-partner .text{
+     margin-bottom:15px;
+   }
+
+   .informational-partner .text,.informational-partner .btn-wrapper{
+     width:100%; 
+   }
+   .fixed-image-for-white-background{
+	 -webkit-background-size: 200% auto;
+     background-size: 150% auto;
+   } 
+
+}
+
+@media (max-width: 767.98px){
+
+   .main-top-block .first-title {
+     font-size:32px;
+   }
+   .main-top-block .second-title {
+     font-size:16px;
+   }
+   #callmy_school input[type="submit"]{
+     font-size:14px; 
+   }
+   .question-and-answer .question-block, .question-and-answer .answer-block{
+     padding: 16px 20px 15px;
+     border-radius: 20px;
+   }
+   .main-footer-block .contacts, .main-footer-block .address{
+     width:100%; 
+   }
+   .main-footer-block .contacts{
+     margin-bottom:10px;
+   }
+   .fixed-image-for-white-background{
+	 background-image:none;
+   } 
+   #anketa_school{
+   	 width:80%; 
+   }
+
+}
+
+
+@media (max-width: 575.98px){
+  #anketa_school{
+    width:100%; 
+  }
+  #anketa_school  .form-row>.form-group{
+    float:none;
+    width:100%;
+  }
+  #callmy_school{
+    width:100%; 
+  }
+  #callmy_school .form-group{
+    width:100%;
+    float:none; 
+    margin-bottom:15px;
+  }
+  #callmy_school .form-group::last-child{
+    margin-bottom:0;
+  }
+  #callmy_school input[type="submit"]{
+    font-size:14px; 
+  }
+
+  #callmy_school .form-group{
+    width:100%;
+    float:none; 
+    margin-bottom:15px;
+  }
+  #callmy_school .form-group::last-child{
+    margin-bottom:0;
+  }
+  #callmy_school input[type="submit"]{
+    font-size:14px; 
+  }
+  .what-is-necessary-section .section-title{
+    font-size:30px;
+  }
+
+  .our-team-section{
+    .text-content{
+      max-width:100%; 
+    }
+  }
+  
+  .studing-programs-container{
+    .item-wrap{
+      width:100%;
+      float:none; 
+    }
+  }
+
+  .question-and-answer .inner {
+    display:block;
+  }
+  .question-and-answer .inner .word{
+    display:block;
+    margin-bottom:5px;
+  }
+  .question-and-answer .inner .text{
+    display:block;
+  }
+  .question-and-answer .question-block {
+    margin-right:30px; 
+  }
+  .question-and-answer .answer-block{
+    margin-left:30px;
+  }
+
+}

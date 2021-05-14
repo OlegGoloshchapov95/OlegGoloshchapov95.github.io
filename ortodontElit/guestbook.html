@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Клиника - проект на Бутстрап 4</title>
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.theme.default.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" rel="stylesheet">
+  </head>
+  <body> 
+  <div id="wrapper" class="main-wrapper">
+      <header id="header-block" class="main-header-block">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container">
+                <a class="navbar-brand" href="#">
+                  <img src="img/spriteLogo.png" class="img-fluid" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>  
+                <div class="collapse navbar-collapse flex-column" id="navbarSupportedContent">
+                  <div class="ml-auto header-top">
+                          <div class="phone-wrap">
+                              <div class="phone">
+                                  <a href="tel:+74992456268">8 499 <strong>245-62-68</strong></a> 
+                              </div>
+                              <div class="hours">
+                                  Пн - Сб 9:00 — 19:00 
+                              </div>
+                          </div>
+                          <div class="address-wrap">
+                            <div class="address">
+                                ул. Усачева, 19Ак2
+                            </div>
+                            <a class="address-link" href="#">
+                                info@orthodont-elit.ru
+                            </a>
+                          </div>
+                          <button class="btn btn-default call-us">
+                                Связаться с нами
+                          </button>
+                  </div>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Клиника
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">О клинике</a>
+                        <a class="dropdown-item" href="#">Сотрудники</a>
+                        <a class="dropdown-item" href="#">Отзывы</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Услуги
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Ортодонтия</a>
+                        <a class="dropdown-item" href="#">Гигиена</a>
+                        <a class="dropdown-item" href="#">Терапия</a>
+                        <a class="dropdown-item" href="#">Ортопедия</a>
+                        <a class="dropdown-item" href="#">Имплантология</a>
+                        <a class="dropdown-item" href="#">Хирургия</a>
+                        <a class="dropdown-item" href="#">Детская стоматология</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Цены</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Акции</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Пациентам
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Документы</a>
+                        <a class="dropdown-item" href="#">Памятники поциентам</a>
+                        <a class="dropdown-item" href="#">Примеры работ</a>
+                        <a class="dropdown-item" href="#">Налоговый вычет</a>
+                        <a class="dropdown-item" href="#">Гарантии вашей безопасности</a>
+                        <a class="dropdown-item" href="#">Вышестоящие инстанции</a>
+                        <a class="dropdown-item" href="#">Оплата</a>
+                        <a class="dropdown-item" href="#">Реквизиты</a>
+                      </div>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Вопросы и ответы<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </nav>
+      </header>
+      <div class="page-content-header">
+          <div class="container">
+              <div class="bread-crumbs">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Клиника</a></li>
+                </ul>
+              </div> 
+              <div class="page-content-title">
+                  <h1 class="block-title">Вопросы и ответы</h1>
+              </div>    
+          </div>
+      </div>
+      <main class="main-block">
+        <div class="ask-a-question-block">
+            <div class="container">
+                <div class="form-wrapper-inputs">
+                    <h2 class="block-title">Задать вопрос</h2>
+                    <form class="" method="post" novalidate="novalidate">
+                        <div class="form-group">
+                            <label for="reviewAuthor" class="required">Имя:</label>
+                            <input type="text" name="reviewAuthor" id="reviewAuthor" value="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="faqEmail" class="required">E-mail:</label>
+                            <input type="text" name="faqEmail" id="reviewAuthor" value="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="reviewMessage">Ваш вопрос:</label>
+                            <textarea name="reviewMessage" id="reviewMessage" class="form-control" rows="10" cols="80"></textarea>
+                        </div>
+                        <input type="hidden" name="reviewSection" value="" id="reviewSection">
+                        <div class="btn-wrapper">
+                            <input type="submit" name="reviewSubmit" id="reviewSubmit" value="Отправить" class="btn btn-default">
+                        </div>
+                    </form>
+                </div>
+            </div>    
+        </div>
+        
+        <div class="quest-and-answ-block">
+            <div class="container">
+                <h2 class="block-title">Ответы на вопросы</h2>
+                <div class="quest-and-answ-list">
+                    <div class="quest-answ-item">
+                        <div class="question">
+                            <strong>Ольга</strong>: Здравствуйте! У моей дочери (6 лет) следующая проблема-сосёт язык как соску, тем самым нарушается прикус, меняется осанка. Пошли к ортодонту, он посоветовал обратиться к логопеду и выполнять определённые упражнения. Пошли, упражнения выполняем, результата ноль. Ребёнок сосёт язык и днём и ночью, все что мы делаем аннулируется ща счёт активного сосания языка ночью. Поможет ли эластопозиционер в нашем случае? Если нет, то какой способ еще можно рассмотреть? Спасибо </div>
+                        <div class="answer">
+                            Ольга, добрый день! В данном случае поможет комплексное лечение: логопед, ортодонт, лечебная гимнастика, детский невролог.
+                            <br>--
+                            <br>С уважением,
+                            <br>Арсенина Ольга Ивановна
+                            <br>д.м.н., врач-ортодонт, профессор, заслуженный врач РФ </div>
+                        <time class="time" datetime="08.08.2018 16:56:00">08.08.2018</time>
+                    </div>
+                    <div class="quest-answ-item">
+                        <div class="question">
+                            <strong>Екатерина</strong>: Здравствуйте! Приобрела корректор 3, во время лечения на него надо давить зубами или просто вставить в рот и спокойно сомкнуть губы! Когда сдавливаю зубы с какой, она присасывается к щекам и языку, вотри эти места немного болят и припухают! </div>
+                        <div class="answer">
+                            Екатерина, добрый день! Спокойно носите корректор, постепенно привыкайте. Специально не нужно сжимать. Когда глотаете, возникает вакуум, аппарат немного присасывается. Когда снимаете, слизистые валики проходят.
+                            Если в каком-то месте аппарат натирает, необходимо сходить на прием к Вашему лечащему врачу на коррекцию/припасовку аппарата.
+                            <br>--
+                            <br>С уважением,
+                            <br>Арсенина Ольга Ивановна
+                            <br>д.м.н., врач-ортодонт, профессор, заслуженный врач РФ </div>
+                        <time class="time" datetime="29.07.2018 12:33:49">29.07.2018</time>
+                    </div>
+                    <div class="quest-answ-item">
+                        <div class="question">
+                            <strong>Илона</strong>: Добрый день! Мы приобретали корректор через стоматологическую клинику в нашем городе, не у вас непосредственно. В ходе примерки корректора доктор подрезала его ножницами. Это допустимо? Заранее, спасибо! </div>
+                        <div class="answer">
+                            Илона, добрый день! Да, при необходимости врач может проводит припасовку аппарата (подрезать его).
+                            <br>--
+                            <br>С уважением,
+                            <br>Попова Наталья Владимировна
+                            <br>к.м.н., врач-ортодонт </div>
+                        <time class="time" datetime="05.07.2018 22:23:01">05.07.2018</time>
+                    </div>
+                    <div class="quest-answ-item">
+                        <div class="question">
+                            <strong>Елена</strong>: Здраствуйте, хочу приобрести корректор 2.Есть ли он в наличии и возможна ли доставка в Химки? и цены? </div>
+                        <div class="answer">
+                            Елена, добрый день! Корректор №2 есть в наличии. Стоимость аппарата - 3000 руб. Доставка курьером до Химок - 500 руб.
+                            <br>--
+                            <br>С уважением,
+                            <br>Администрация
+                            <br>ООО "Ортодонт-Элит </div>
+                        <time class="time" datetime="15.06.2018 22:03:12">15.06.2018</time>
+                    </div> 
+                    <div class="quest-answ-item">
+                        <div class="question">
+                            <strong>Мария</strong>: Здравствуйте! Подскажите,пожалуйста, цифра 4 соответствующего размера корректора должна быть внизу или вверху во время ношения?
+                            Благодарю. </div>
+                        <div class="answer">
+                            Мария, добрый день! Цифра 4 должна быть вверху.
+                            <br>--
+                            <br>С уважением,
+                            <br>Администрация
+                            <br>ООО "Ортодонт-Элит
+                        </div>
+                        <time class="time" datetime="13.06.2018 02:51:38">13.06.2018</time>
+                    </div>
+                    <nav class="paginator-wrapper faq-paginator">
+                        <ul class="pagination">
+                            <li class="active">
+                                <span>1</span>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                            <!-- / Pages in range -->
+                            <!-- Last page -->
+                            <li class="delimiter">
+                                <span>...</span>
+                            </li>
+                            <li>
+                                <a href="#">20</a>
+                            </li>
+                            <!-- / Last page -->
+                            <li class="next">
+                                <a href="#" title="Вперед">Следущая</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>    
+
+      </main> 
+      <footer id="footer-block" class="main-footer-block">
+          <div class="container">
+              <div class="row foter-row">
+                  <div class="foter-info col-12 col-md-3 text-center text-md-left">
+                      <div class="copy"><i>©</i>Стоматология «<span class="name">Ортодонт-Элит</span>»,
+                          <br>
+                          Москва, метро Спортивная
+                      </div>
+                      <div class="phone">
+                        <a href="tel:+74992456268">8 499 <strong>245-62-68</strong></a>
+                      </div>
+
+                      <div class="address">ул. Усачева, 19Ак2</div>              
+                      <a class="email" href="mailto:info@orthodont-elit.ru">
+                          <span>info@orthodont-elit.ru</span>
+                      </a>
+                  </div>
+                  <div class="col-12 col-sm-4 col-md-3 text-center text-md-left">
+                      <ul class="menu">
+                          <div class="main-li">
+                              <a href="#">Клиника</a>
+                          </div>
+                          <ul>
+                              <li>
+                                  <a href="#">О клинике</a>
+                              </li>
+                              <li>
+                                  <a href="#">Сотрудники</a>
+                              </li>
+                              <li>
+                                  <a href="#">Отзывы</a>
+                              </li>
+                          </ul>
+                          <div class="main-li">
+                              <a href="#">Цены</a>
+                          </div>
+                          <div class="main-li">
+                              <a href="#">Акции</a>
+                          </div>
+                      </ul>
+                  </div>
+                  <div class="col-12 col-sm-4 col-md-3 text-center text-md-left">
+                      <ul class="menu">
+                          <div class="main-li ">
+                              <a href="#">Услуги</a>
+                          </div>
+                          <ul>
+                              <li>
+                                  <a href="#">Ортодонтия</a>
+                              </li>
+                              <li>
+                                  <a href="#">Гигиена</a>
+                              </li>
+                              <li>
+                                  <a href="#">Терапия</a>
+                              </li>
+                              <li>
+                                  <a href="#">Ортопедия</a>
+                              </li>
+                              <li>
+                                  <a href="#">Имплантология</a>
+                              </li>
+                              <li>
+                                  <a href="#">Хирургия</a>
+                              </li>
+                              <li>
+                                  <a href="#">Детская стоматология</a>
+                              </li>
+                          </ul>
+                      </ul>
+                  </div>
+                  <div class="col-12 col-sm-4 col-md-3 text-center text-md-left">
+                      <ul class="menu">
+                          <div class="main-li">
+                              <a href="#">Пациентам</a>
+                          </div>
+                          <ul>
+                              <li>
+                                  <a href="#">Документы</a>
+                              </li>
+                              <li>
+                                  <a href="#">Памятки пациентам</a>
+                              </li>
+                              <li>
+                                  <a href="#">Примеры работ</a>
+                              </li>
+                              <li>
+                                  <a href="#">Налоговый вычет</a>
+                              </li>
+                              <li>
+                                  <a href="#">Гарантии вашей безопасности</a>
+                              </li>
+                              <li>
+                                  <a href="#">Вышестоящие инстанции</a>
+                              </li>
+                              <li>
+                                  <a href="#">Оплата</a>
+                              </li>
+                              <li>
+                                  <a href="#">Реквизиты</a>
+                              </li>
+                          </ul>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </footer>  
+  </div>  
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+  </body>
+</html>
