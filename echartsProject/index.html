@@ -6,21 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #chartmain>div span:nth-child(3)::before {
+            content: "$";
+        }
+    </style>
 </head>
 
 <body>
     <!--div container for the chart. this in the <body></body>-->
-    <div id="chartmain" style="width:900px; height: 500px;"></div>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
+    <div id="chartmain" style="width:900px; height: 800px;"></div>
+    <script type="text/javascript" src="js/jQuery.js"></script>
     <script type="text/javascript" src="js/echarts.js"></script>
     <script type="text/javascript">
 
-        const upColor = '#ec0000';
-        const upBorderColor = '#8A0000';
-        const downColor = '#00da3c';
-        const downBorderColor = '#008F28';
+        var upColor = '#ec0000';
+        var upBorderColor = '#8A0000';
+        var downColor = '#00da3c';
+        var downBorderColor = '#008F28';
         // Each item: open，close，lowest，highest
-        const data0 = splitData([
+        var data0 = splitData([
             ['10.10.2021 10:00', 101.1, 101.1, 100.5, 104.3],
             ['10.10.2021 10:10', 101.1, 101.2, 96.6, 104.9],
             ['10.10.2021 10:20', 101.2, 101.3, 98.1, 104.4],
@@ -89,8 +94,8 @@
             ['10.10.2021 20:50', 116.0, 116.8, 114.4, 120.2]
         ]);
         function splitData(rawData) {
-            const categoryData = [];
-            const values = [];
+            var categoryData = [];
+            var values = [];
             for (var i = 0; i < rawData.length; i++) {
                 categoryData.push(rawData[i].splice(0, 1)[0]);
                 values.push(rawData[i]);
@@ -109,10 +114,6 @@
             return result;
         }
         option = {
-            title: {
-                text: 'Histiry chart',
-                left: 0
-            },
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -120,10 +121,15 @@
                 }
             },
             legend: {
-                top:0,
+                top: 0,
                 left: 'right',
-                data: ['open', 'close', 'lower', 'highest', "volume", "brand bid","leads"]
+                data: ["candlechart", "volume", "brand bid", "leads"]
             },
+            datasets: [{
+                datalabels: {
+                    left: 'right'
+                }
+            }],
             grid: [
                 {
                     left: '10%',
@@ -193,39 +199,97 @@
             ],
             series: [
                 {
-                    name: 'open',
-                    type: 'line',
-                    data: calculateData(0),
-                    smooth: true,
-                    lineStyle: {
-                        opacity: 0.5
-                    }
-                },
-                {
-                    name: 'close',
-                    type: 'line',
-                    data: calculateData(1),
-                    smooth: true,
-                    lineStyle: {
-                        opacity: 0.5
-                    }
-                },
-                {
-                    name: 'lower',
-                    type: 'line',
-                    data: calculateData(2),
-                    smooth: true,
-                    lineStyle: {
-                        opacity: 0.5
-                    }
-                },
-                {
-                    name: 'highest',
-                    type: 'line',
-                    data: calculateData(3),
-                    smooth: true,
-                    lineStyle: {
-                        opacity: 0.5
+                    name: 'candlechart',
+                    type: 'candlestick',
+                    data: data0.values,
+                    itemStyle: {
+                        color: upColor,
+                        color0: downColor,
+                        borderColor: upBorderColor,
+                        borderColor0: downBorderColor
+                    },
+                    markPoint: {
+                        label: {
+                            formatter: function (param) {
+                                return param != null ? Math.round(param.value) + '' : '';
+                            }
+                        },
+                        data: [
+                            {
+                                name: 'Mark',
+                                coord: ['2013/5/31', 2300],
+                                value: 2300,
+                                itemStyle: {
+                                    color: 'rgb(41,60,85)'
+                                }
+                            },
+                            {
+                                name: 'highest value',
+                                type: 'max',
+                                valueDim: 'highest'
+                            },
+                            {
+                                name: 'lowest value',
+                                type: 'min',
+                                valueDim: 'lowest'
+                            },
+                            {
+                                name: 'average value on close',
+                                type: 'average',
+                                valueDim: 'close'
+                            }
+                        ],
+                        tooltip: {
+                            formatter: function (param) {
+                                return param.name + '<br>' + (param.data.coord || '');
+                            }
+                        }
+                    },
+                    markLine: {
+                        symbol: ['none', 'none'],
+                        data: [
+                            [
+                                {
+                                    name: 'from lowest to highest',
+                                    type: 'min',
+                                    valueDim: 'lowest',
+                                    symbol: 'circle',
+                                    symbolSize: 10,
+                                    label: {
+                                        show: false
+                                    },
+                                    emphasis: {
+                                        label: {
+                                            show: false
+                                        }
+                                    }
+                                },
+                                {
+                                    type: 'max',
+                                    valueDim: 'highest',
+                                    symbol: 'circle',
+                                    symbolSize: 10,
+                                    label: {
+                                        show: false
+                                    },
+                                    emphasis: {
+                                        label: {
+                                            show: false
+                                        }
+                                    }
+                                }
+                            ],
+                            {
+                                name: 'min line on close',
+                                type: 'min',
+                                valueDim: 'close'
+                            },
+                            {
+                                name: 'max line on close',
+                                type: 'max',
+                                valueDim: 'close'
+                            }
+                        ]
                     }
                 },
                 {
@@ -273,7 +337,12 @@
         };
         var myChart = echarts.init(document.getElementById('chartmain'));
         myChart.setOption(option);
-
+        var str = 'leads';
+        $("#chartmain").on("mousemove", function () {
+            var elements = $("#chartmain>div span").filter(function () {
+                return $(this).text() === str;
+            }).text("cost");
+        });
     </script>
 
 </body>
