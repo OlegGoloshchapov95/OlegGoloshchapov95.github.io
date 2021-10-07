@@ -15,8 +15,8 @@
 
 <body>
     <!--div container for the chart. this in the <body></body>-->
-    <div id="chartmain" style="width:900px; height: 800px;"></div>
-    <script type="text/javascript" src="js/jQuery.js"></script>
+    <div id="chartmain" style="width:900px; height: 900px;"></div>
+    <!--<script type="text/javascript" src="js/jQuery.js"></script>-->
     <script type="text/javascript" src="js/echarts.js"></script>
     <script type="text/javascript">
 
@@ -123,7 +123,7 @@
             legend: {
                 top: 0,
                 left: 'right',
-                data: ["candlechart", "volume", "brand bid", "leads"]
+                data: ["current price", "cap", "my max bid", "lead"]
             },
             datasets: [{
                 datalabels: {
@@ -134,13 +134,13 @@
                 {
                     left: '10%',
                     right: '8%',
-                    height: '35%'
+                    height: '47%'
                 },
                 {
                     left: '10%',
                     right: '8%',
                     top: '60%',
-                    height: '20%'
+                    height: '18%'
                 }
             ],
             xAxis: [
@@ -199,7 +199,7 @@
             ],
             series: [
                 {
-                    name: 'candlechart',
+                    name: 'current price',
                     type: 'candlestick',
                     data: data0.values,
                     itemStyle: {
@@ -207,93 +207,10 @@
                         color0: downColor,
                         borderColor: upBorderColor,
                         borderColor0: downBorderColor
-                    },
-                    markPoint: {
-                        label: {
-                            formatter: function (param) {
-                                return param != null ? Math.round(param.value) + '' : '';
-                            }
-                        },
-                        data: [
-                            {
-                                name: 'Mark',
-                                coord: ['2013/5/31', 2300],
-                                value: 2300,
-                                itemStyle: {
-                                    color: 'rgb(41,60,85)'
-                                }
-                            },
-                            {
-                                name: 'highest value',
-                                type: 'max',
-                                valueDim: 'highest'
-                            },
-                            {
-                                name: 'lowest value',
-                                type: 'min',
-                                valueDim: 'lowest'
-                            },
-                            {
-                                name: 'average value on close',
-                                type: 'average',
-                                valueDim: 'close'
-                            }
-                        ],
-                        tooltip: {
-                            formatter: function (param) {
-                                return param.name + '<br>' + (param.data.coord || '');
-                            }
-                        }
-                    },
-                    markLine: {
-                        symbol: ['none', 'none'],
-                        data: [
-                            [
-                                {
-                                    name: 'from lowest to highest',
-                                    type: 'min',
-                                    valueDim: 'lowest',
-                                    symbol: 'circle',
-                                    symbolSize: 10,
-                                    label: {
-                                        show: false
-                                    },
-                                    emphasis: {
-                                        label: {
-                                            show: false
-                                        }
-                                    }
-                                },
-                                {
-                                    type: 'max',
-                                    valueDim: 'highest',
-                                    symbol: 'circle',
-                                    symbolSize: 10,
-                                    label: {
-                                        show: false
-                                    },
-                                    emphasis: {
-                                        label: {
-                                            show: false
-                                        }
-                                    }
-                                }
-                            ],
-                            {
-                                name: 'min line on close',
-                                type: 'min',
-                                valueDim: 'close'
-                            },
-                            {
-                                name: 'max line on close',
-                                type: 'max',
-                                valueDim: 'close'
-                            }
-                        ]
                     }
                 },
                 {
-                    name: 'brand bid',
+                    name: 'my max bid',
                     data: [100.0, 100.0, 100.0, 104.0, 104.0, 104.0, 104.0, 110.0, 110.0, 110.0, 110.0, 110.0, 110.0, 110.0, 110.0,
                         110.0, 110.0, 110.0, 110.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0,
                         115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0, 115.0,
@@ -303,7 +220,7 @@
                     type: 'line'
                 },
                 {
-                    name: 'leads',
+                    name: 'lead',
                     symbolSize: 20,
                     data: [
                         ["10.10.2021\n 10:20", 96, 9],
@@ -320,7 +237,7 @@
                     type: 'scatter'
                 },
                 {
-                    name: 'volume',
+                    name: 'cap',
                     type: 'bar',
                     xAxisIndex: 1,
                     yAxisIndex: 1,
@@ -337,12 +254,13 @@
         };
         var myChart = echarts.init(document.getElementById('chartmain'));
         myChart.setOption(option);
+        /*
         var str = 'leads';
         $("#chartmain").on("mousemove", function () {
             var elements = $("#chartmain>div span").filter(function () {
                 return $(this).text() === str;
             }).text("cost");
-        });
+        });*/
     </script>
 
 </body>
