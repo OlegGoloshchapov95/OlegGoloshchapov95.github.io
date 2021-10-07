@@ -17,7 +17,9 @@
     <!--div container for the chart. this in the <body></body>-->
     <div id="chartmain" style="width:900px; height: 900px;"></div>
     <!--<script type="text/javascript" src="js/jQuery.js"></script>-->
+
     <script type="text/javascript" src="js/echarts.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
     <script type="text/javascript">
 
         var upColor = '#ec0000';
@@ -114,6 +116,16 @@
             return result;
         }
         option = {
+            theme: {
+                 color: [
+                    "#516b91",
+                    "#59c4e6",
+                    "#5ab1ef",
+                    "#ffb980",
+                    "#d87a80",
+                    "#cbb0e3"
+                ]
+            },
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -252,7 +264,7 @@
                 }
             ]
         };
-        var myChart = echarts.init(document.getElementById('chartmain'));
+        var myChart = echarts.init(document.getElementById('chartmain'),'westeros');
         myChart.setOption(option);
         /*
         var str = 'leads';
