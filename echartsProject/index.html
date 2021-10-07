@@ -95,15 +95,14 @@
                 categoryData.push(rawData[i].splice(0, 1)[0]);
                 values.push(rawData[i]);
             }
+            console.log(values);
             return {
                 categoryData: categoryData,
                 values: values
             };
         }
-        function calculateMA(dayCount) {
+        /*function calculateMA(dayCount) {
             var result = [];
-
-            console.log(data0.values);
 
             for (var i = 0, len = data0.values.length; i < len; i++) {
                 if (i < dayCount) {
@@ -115,6 +114,13 @@
                     sum += +data0.values[i - j][1];
                 }
                 result.push(sum / dayCount);
+            }
+            return result;
+        }*/
+        function calculateMA(dayCount) {
+            var result = [];
+            for (var i = 0, len = data0.values.length; i < len; i++) {
+                result.push(data0.values[i][dayCount]);
             }
             return result;
         }
@@ -205,7 +211,7 @@
                 {
                     name: 'open',
                     type: 'line',
-                    data: calculateMA(5),
+                    data: calculateMA(0),
                     smooth: true,
                     lineStyle: {
                         opacity: 0.5
@@ -214,7 +220,7 @@
                 {
                     name: 'close',
                     type: 'line',
-                    data: calculateMA(10),
+                    data: calculateMA(1),
                     smooth: true,
                     lineStyle: {
                         opacity: 0.5
@@ -223,7 +229,7 @@
                 {
                     name: 'lower',
                     type: 'line',
-                    data: calculateMA(20),
+                    data: calculateMA(2),
                     smooth: true,
                     lineStyle: {
                         opacity: 0.5
@@ -232,7 +238,7 @@
                 {
                     name: 'highest',
                     type: 'line',
-                    data: calculateMA(30),
+                    data: calculateMA(3),
                     smooth: true,
                     lineStyle: {
                         opacity: 0.5
