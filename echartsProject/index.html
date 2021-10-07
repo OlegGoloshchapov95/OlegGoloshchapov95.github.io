@@ -101,7 +101,7 @@
                 values: values
             };
         }
-        function calculateMA(index) {
+        function calculateData(index) {
             var result = [];
             for (var i = 0, len = data0.values.length; i < len; i++) {
                 result.push(data0.values[i][index]);
@@ -195,7 +195,7 @@
                 {
                     name: 'open',
                     type: 'line',
-                    data: calculateMA(0),
+                    data: calculateData(0),
                     smooth: true,
                     lineStyle: {
                         opacity: 0.5
@@ -204,7 +204,7 @@
                 {
                     name: 'close',
                     type: 'line',
-                    data: calculateMA(1),
+                    data: calculateData(1),
                     smooth: true,
                     lineStyle: {
                         opacity: 0.5
@@ -213,7 +213,7 @@
                 {
                     name: 'lower',
                     type: 'line',
-                    data: calculateMA(2),
+                    data: calculateData(2),
                     smooth: true,
                     lineStyle: {
                         opacity: 0.5
@@ -222,7 +222,7 @@
                 {
                     name: 'highest',
                     type: 'line',
-                    data: calculateMA(3),
+                    data: calculateData(3),
                     smooth: true,
                     lineStyle: {
                         opacity: 0.5
@@ -268,13 +268,11 @@
                         36309.3, 34912.4, 34631.5, 36131.5, 35696.8, 35483.9, 34968.5, 34394.0, 34356.3,
                         33726.1, 31795.0, 30328.6, 29156.5, 27741.6, 24910.8, 24120.9, 21483.4, 20122.6
                     ]
-
                 }
             ]
         };
         var myChart = echarts.init(document.getElementById('chartmain'));
         myChart.setOption(option);
-
 
     </script>
 
